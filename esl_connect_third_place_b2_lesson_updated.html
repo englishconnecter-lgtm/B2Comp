@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESL CONNECT | Do You Have a Third Place?</title>
+<style>
+:root{--blue:#133c61;--blue2:#295f92;--gold:#f1c24d;--bg:#edf3f8;--text:#243746;--muted:#6b7c8a;--line:#d7e1ea;--green:#dff5e3;--greenText:#1b6a31;--red:#fde1e1;--redText:#9b1f1f}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.header{max-width:1100px;margin:18px auto 0;background:linear-gradient(135deg,var(--blue),var(--blue2));padding:18px 24px;border-radius:16px;color:#fff;display:flex;gap:18px;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.14)}
+.logo{width:84px;height:84px;border-radius:10px;background:#fff;color:var(--blue);display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;line-height:1.05;border:3px solid var(--gold);flex:0 0 auto}
+.header h1{margin:0;font-size:30px;line-height:1.15}.header p{margin:8px 0 0;font-size:15px;opacity:.96}
+.wrap{max-width:1100px;margin:0 auto;padding:22px}.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:980px;margin:0 auto 18px}.tab{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:11px 8px;font-weight:700;cursor:pointer}.tab.active,.tab:hover{background:var(--gold);color:#1e2f3d}
+.page{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 4px 14px rgba(19,60,97,.08)}.page.active{display:block}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}.card,.task{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(19,60,97,.06)}
+.start-shot{overflow:hidden;border-radius:12px;border:1px solid var(--line);margin-bottom:12px}.start-shot img{display:block;width:100%;height:auto}
+.tag{display:inline-block;background:#e8f0f7;color:var(--blue);padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;margin:0 6px 8px 0}.small{font-size:14px;color:var(--muted)}
+.reading{column-count:2;column-gap:28px}.reading p{margin-top:0}.q{font-weight:700;margin:14px 0 8px}
+.answer-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0 16px}
+.answer-text{display:none;color:var(--greenText);font-weight:600}.answer-text.show{display:block}
+.btn{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}.btn:hover{background:var(--blue2)}
+.white-input{width:100%;min-height:58px;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff}
+.feedback{margin-top:10px;padding:10px 12px;border-radius:10px;font-weight:700}.ok{background:var(--green);color:var(--greenText)}.bad{background:var(--red);color:var(--redText)}
+.choice-group{display:grid;gap:8px;margin:10px 0 16px}.choice{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff;cursor:pointer}.choice.correct{background:var(--green);border-color:#94d2a0;color:var(--greenText)}.choice.wrong{background:var(--red);border-color:#e6a1a1;color:var(--redText)}.choice.selected{outline:2px solid #8bb3d8}
+.reading .ev{padding:1px 2px;border-radius:4px}.reading .ev.on{background:#fff1a8;box-shadow:0 0 0 2px #fff1a8}
+.navline{display:flex;justify-content:space-between;align-items:center;margin-top:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grammar-example{background:#eff6fb;border-left:5px solid var(--blue2);padding:14px;border-radius:10px}
+@media (max-width:850px){.hero,.two-col{grid-template-columns:1fr}.reading{column-count:1}.tabs{grid-template-columns:1fr 1fr}.header{flex-direction:column;align-items:flex-start}.header h1{font-size:25px}}
+</style>
+</head>
+<body>
+<header class="header"><div class="logo">ESL<br>CONNECT</div><div><h1>Do You Have a “Third Place”?</h1><p>B2 reading lesson about social spaces, well-being and community. Adapted for upper-intermediate learners.</p></div></header>
+<main class="wrap">
+<nav class="tabs" aria-label="Lesson sections">
+<button class="tab active" onclick="showPage(0)">Start</button><button class="tab" onclick="showPage(1)">Reading Comprehension</button><button class="tab" onclick="showPage(2)">Vocabulary</button><button class="tab" onclick="showPage(3)">Grammar</button><button class="tab" onclick="showPage(4)">Discussion</button>
+</nav>
+
+<section class="page active">
+<div class="hero">
+<div><span class="tag">B2</span><span class="tag">Well-being</span><span class="tag">Community</span><h2>Before you read</h2>
+<p>A <strong>third place</strong> is a place that is not your home and not your workplace or school. It could be a café, a park, a library, a community centre or another public place where people relax and spend time.</p>
+<div class="task"><h3>Warm-up</h3><p class="q">1. Where do you usually go after work or school?</p><p class="q">2. Do you have a place where you feel relaxed around other people?</p><p class="q">3. Why can spending time with other people improve mental health?</p></div></div>
+<div class="card"><div class="start-shot"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80" alt="Friends sitting together in a restaurant"></div><h3>Article information</h3><p><strong>Title:</strong> Do you have a “third place”? Here’s why finding one is key for your well-being</p><p><strong>Level:</strong> B2 (adapted text)</p><p class="small">This lesson uses a simplified version of the text so upper-intermediate students can focus on key ideas, vocabulary and discussion.</p></div>
+</div><div class="navline"><span></span><button class="btn" onclick="showPage(1)">Go to Reading Comprehension</button></div>
+</section>
+
+<section class="page">
+<h2>Reading Comprehension</h2><p class="small">Read the adapted text. Then answer the questions. When you click <strong>Reveal answer</strong>, the answer appears in the white box and the exact evidence is highlighted in the text.</p>
+<article class="reading">
+<p>At the end of the day, many people go straight between home and work or school. <span class="ev" id="ev1">But experts say that life may feel better if people also have a “third place”.</span></p>
+<p><span class="ev" id="ev2">A third place is a place that is not your home and not your workplace or school.</span> It can be almost any place: a coffee shop, a park, a bookstore, a church or a community centre. The important point is that you choose to go there. Nobody forces you to be there.</p>
+<p>The idea of the third place comes from sociologist Ray Oldenburg, who wrote about it in 1989. He explained that these places help people relax in public and enjoy social life outside home and work. <span class="ev" id="ev3">In third places, people often meet regular visitors and sometimes make new connections.</span> Conversation is usually light and friendly, and there is no pressure to be productive.</p>
+<p>According to researcher Narae Lee, one of the most important features of third places is social contact. <span class="ev" id="ev4">This contact can be direct, such as chatting or doing activities with other people.</span> It can also be indirect. For example, a person in a theatre may not speak to others, but simply being surrounded by people with a similar interest can still feel meaningful.</p>
+<p>Third places matter because many societies are becoming lonelier. <span class="ev" id="ev5">Even when people are quiet in a third place, simply being around others can reduce loneliness and help build a sense of community.</span> Some people go just to enjoy the atmosphere, listen to the background noise and feel less alone.</p>
+<p>How can people find a third place? Lee says the first step is to think about your interests. <span class="ev" id="ev6">If you like reading, you could join a book club. If you enjoy exercise, a running club might work.</span> Even a park can be a third place if you like being outdoors. The best third place is one that is easy to reach in daily life, on foot or by public transport. Over time, it may become somewhere you look forward to visiting.</p>
+</article>
+
+<div class="task"><h3>Questions</h3>
+<p class="q">1. What is a “third place”?</p><textarea class="white-input" placeholder="Write your answer here..."></textarea><div class="answer-box"><button class="btn" onclick="revealAnswer('a1',['ev2'])">Reveal answer</button><div id="a1" class="answer-text">A third place is somewhere that is not your home and not your workplace or school.</div></div>
+<p class="q">2. Why are third places different from work or school?</p><textarea class="white-input" placeholder="Write your answer here..."></textarea><div class="answer-box"><button class="btn" onclick="revealAnswer('a2',['ev2'])">Reveal answer</button><div id="a2" class="answer-text">You choose to go there; nobody forces you to be there.</div></div>
+<p class="q">3. What social benefit can third places provide?</p><textarea class="white-input" placeholder="Write your answer here..."></textarea><div class="answer-box"><button class="btn" onclick="revealAnswer('a3',['ev3'])">Reveal answer</button><div id="a3" class="answer-text">They help people meet regular visitors and sometimes make new connections.</div></div>
+<p class="q">4. How can someone experience social contact without speaking directly to anyone?</p><textarea class="white-input" placeholder="Write your answer here..."></textarea><div class="answer-box"><button class="btn" onclick="revealAnswer('a4',['ev4'])">Reveal answer</button><div id="a4" class="answer-text">They can simply be surrounded by people with a similar interest.</div></div>
+<p class="q">5. What makes a third place easier to include in everyday life?</p><textarea class="white-input" placeholder="Write your answer here..."></textarea><div class="answer-box"><button class="btn" onclick="revealAnswer('a5',['ev6'])">Reveal answer</button><div id="a5" class="answer-text">It should be easy to reach, ideally on foot or by public transport.</div></div>
+</div>
+<div class="navline"><button class="btn" onclick="showPage(0)">Previous</button><button class="btn" onclick="showPage(2)">Go to Vocabulary</button></div>
+</section>
+
+<section class="page">
+<h2>Vocabulary</h2>
+<div class="task"><h3>Exercise 1: Choose the best meaning</h3>
+<p class="small">Click an answer. It will immediately turn green if it is correct or red if it is incorrect.</p>
+<p class="q">1. What does <strong>foster</strong> mean in the article?</p><div class="choice-group" data-answer="c"><div class="choice" data-value="a" onclick="pick(this)">to measure carefully</div><div class="choice" data-value="b" onclick="pick(this)">to avoid completely</div><div class="choice" data-value="c" onclick="pick(this)">to encourage the development of something</div></div>
+<p class="q">2. What does <strong>facilitate</strong> mean?</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">to make something more private</div><div class="choice" data-value="b" onclick="pick(this)">to make a process easier</div><div class="choice" data-value="c" onclick="pick(this)">to make someone feel guilty</div></div>
+<p class="q">3. What does <strong>collective identity</strong> mean?</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">a shared sense of belonging to a group</div><div class="choice" data-value="b" onclick="pick(this)">a private habit that nobody else sees</div><div class="choice" data-value="c" onclick="pick(this)">a rule created by an employer</div></div>
+<p class="q">4. What does <strong>accessible</strong> mean in this context?</p><div class="choice-group" data-answer="c"><div class="choice" data-value="a" onclick="pick(this)">expensive and exclusive</div><div class="choice" data-value="b" onclick="pick(this)">quiet and formal</div><div class="choice" data-value="c" onclick="pick(this)">easy to reach or use</div></div>
+<p class="q">5. What does <strong>indirect social interaction</strong> mean?</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">arguing with strangers online</div><div class="choice" data-value="b" onclick="pick(this)">being around people without necessarily speaking to them</div><div class="choice" data-value="c" onclick="pick(this)">working alone from home</div></div>
+<div class="answer-box"><button class="btn" onclick="checkChoices(this)">Check score</button><div class="feedback" style="display:none"></div></div></div>
+
+<div class="task"><h3>Exercise 2: Complete the sentences</h3>
+<p class="small">Click an answer. It will immediately turn green if it is correct or red if it is incorrect.</p>
+<p class="q">1. Community spaces can help people develop a stronger sense of ______.</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">belonging</div><div class="choice" data-value="b" onclick="pick(this)">commuting</div><div class="choice" data-value="c" onclick="pick(this)">productivity</div></div>
+<p class="q">2. A third place should not feel like an ______; people should want to go there.</p><div class="choice-group" data-answer="c"><div class="choice" data-value="a" onclick="pick(this)">ambience</div><div class="choice" data-value="b" onclick="pick(this)">interest</div><div class="choice" data-value="c" onclick="pick(this)">obligation</div></div>
+<p class="q">3. A café with friendly regulars can ______ light conversation.</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">restrict</div><div class="choice" data-value="b" onclick="pick(this)">facilitate</div><div class="choice" data-value="c" onclick="pick(this)">replace</div></div>
+<p class="q">4. People may feel less lonely when they are surrounded by others in a relaxed ______.</p><div class="choice-group" data-answer="c"><div class="choice" data-value="a" onclick="pick(this)">deadline</div><div class="choice" data-value="b" onclick="pick(this)">commute</div><div class="choice" data-value="c" onclick="pick(this)">setting</div></div>
+<p class="q">5. Even hobbies that seem ______ can become social through clubs or groups.</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">solitary</div><div class="choice" data-value="b" onclick="pick(this)">collective</div><div class="choice" data-value="c" onclick="pick(this)">public</div></div>
+<div class="answer-box"><button class="btn" onclick="checkChoices(this)">Check score</button><div class="feedback" style="display:none"></div></div></div>
+
+<div class="task"><h3>Exercise 3: Collocations</h3>
+<p class="q">1. ______ a sense of community</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">spend</div><div class="choice" data-value="b" onclick="pick(this)">build</div><div class="choice" data-value="c" onclick="pick(this)">miss</div></div>
+<p class="q">2. ______ social interaction</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">facilitate</div><div class="choice" data-value="b" onclick="pick(this)">commute</div><div class="choice" data-value="c" onclick="pick(this)">require</div></div>
+<p class="q">3. ______ loneliness</p><div class="choice-group" data-answer="c"><div class="choice" data-value="a" onclick="pick(this)">organise</div><div class="choice" data-value="b" onclick="pick(this)">surround</div><div class="choice" data-value="c" onclick="pick(this)">reduce</div></div>
+<div class="answer-box"><button class="btn" onclick="checkChoices(this)">Check score</button><div class="feedback" style="display:none"></div></div></div>
+<div class="navline"><button class="btn" onclick="showPage(1)">Previous</button><button class="btn" onclick="showPage(3)">Go to Grammar</button></div>
+</section>
+
+<section class="page">
+<h2>Grammar: Defining and non-defining relative clauses</h2>
+<div class="task"><div class="grammar-example"><strong>Examples from the topic</strong><br>A third place is a location <strong>that</strong> is not your home or workplace.<br>Coffee shops, <strong>which</strong> are often easy to access, can be good third places.<br>A book club is a group <strong>whose</strong> members share an interest.</div><p>Use <strong>defining relative clauses</strong> to give essential information. Use <strong>non-defining relative clauses</strong> to add extra information. Non-defining clauses need commas.</p></div>
+
+<div class="task"><h3>Exercise 1: Choose the best relative pronoun</h3>
+<p class="small">Click an answer. It will immediately turn green if it is correct or red if it is incorrect.</p>
+<p class="q">1. A third place is somewhere ____ people choose to spend time.</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">which</div><div class="choice" data-value="b" onclick="pick(this)">where</div><div class="choice" data-value="c" onclick="pick(this)">whose</div></div>
+<p class="q">2. Ray Oldenburg, ____ wrote about third places, was a sociologist.</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">who</div><div class="choice" data-value="b" onclick="pick(this)">where</div><div class="choice" data-value="c" onclick="pick(this)">whose</div></div>
+<p class="q">3. A club ____ members meet regularly can become a third place.</p><div class="choice-group" data-answer="c"><div class="choice" data-value="a" onclick="pick(this)">where</div><div class="choice" data-value="b" onclick="pick(this)">which</div><div class="choice" data-value="c" onclick="pick(this)">whose</div></div>
+<p class="q">4. A library is a quiet place ____ people can read, study and meet others.</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">who</div><div class="choice" data-value="b" onclick="pick(this)">where</div><div class="choice" data-value="c" onclick="pick(this)">whose</div></div>
+<div class="answer-box"><button class="btn" onclick="checkChoices(this)">Check score</button><div class="feedback" style="display:none"></div></div></div>
+
+<div class="task"><h3>Exercise 2: Defining or non-defining?</h3>
+<p class="q">1. “A third place is a place that people visit voluntarily.”</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">Defining</div><div class="choice" data-value="b" onclick="pick(this)">Non-defining</div></div>
+<p class="q">2. “Ray Oldenburg, who was a sociologist, wrote about third places.”</p><div class="choice-group" data-answer="b"><div class="choice" data-value="a" onclick="pick(this)">Defining</div><div class="choice" data-value="b" onclick="pick(this)">Non-defining</div></div>
+<p class="q">3. “People who live alone may especially need social spaces.”</p><div class="choice-group" data-answer="a"><div class="choice" data-value="a" onclick="pick(this)">Defining</div><div class="choice" data-value="b" onclick="pick(this)">Non-defining</div></div>
+<div class="answer-box"><button class="btn" onclick="checkChoices(this)">Check score</button><div class="feedback" style="display:none"></div></div></div>
+
+<div class="task"><h3>Exercise 3: Add commas where necessary</h3>
+<p class="q">1. Narae Lee who studies well-being says social contact is important.</p><textarea class="white-input" placeholder="Rewrite with commas if needed..."></textarea><div class="answer-box"><button class="btn" onclick="toggleAnswer('g1')">Reveal suggested answer</button><div id="g1" class="answer-text">Narae Lee, who studies well-being, says social contact is important.</div></div>
+<p class="q">2. A café that is close to your home is easier to visit regularly.</p><textarea class="white-input" placeholder="Rewrite with commas if needed..."></textarea><div class="answer-box"><button class="btn" onclick="toggleAnswer('g2')">Reveal suggested answer</button><div id="g2" class="answer-text">A café that is close to your home is easier to visit regularly. No commas are needed because the relative clause is essential.</div></div>
+<p class="q">3. Book clubs which bring readers together can reduce loneliness.</p><textarea class="white-input" placeholder="Rewrite with commas if needed..."></textarea><div class="answer-box"><button class="btn" onclick="toggleAnswer('g3')">Reveal suggested answer</button><div id="g3" class="answer-text">Book clubs that bring readers together can reduce loneliness. This is defining, so no commas are needed.</div></div></div>
+
+<div class="task"><h3>Exercise 4: Rewrite using a relative clause</h3>
+<p class="q">1. A park is a place. People can relax there.</p><textarea class="white-input" placeholder="Write your sentence here..."></textarea><div class="answer-box"><button class="btn" onclick="toggleAnswer('g4')">Reveal suggested answer</button><div id="g4" class="answer-text">A park is a place where people can relax.</div></div>
+<p class="q">2. Some people go to cafés. They want background noise and company.</p><textarea class="white-input" placeholder="Write your sentence here..."></textarea><div class="answer-box"><button class="btn" onclick="toggleAnswer('g5')">Reveal suggested answer</button><div id="g5" class="answer-text">Some people who want background noise and company go to cafés.</div></div>
+<p class="q">3. A community centre is a place. Local people can meet there.</p><textarea class="white-input" placeholder="Write your sentence here..."></textarea><div class="answer-box"><button class="btn" onclick="toggleAnswer('g6')">Reveal suggested answer</button><div id="g6" class="answer-text">A community centre is a place where local people can meet.</div></div></div>
+<div class="navline"><button class="btn" onclick="showPage(2)">Previous</button><button class="btn" onclick="showPage(4)">Go to Discussion</button></div>
+</section>
+
+<section class="page">
+<h2>Discussion</h2>
+<div class="two-col"><div class="task"><h3>Talk about it</h3><p class="q">1. Do you already have a third place? Describe it.</p><p class="q">2. Why do modern people often feel lonely?</p><p class="q">3. Is online contact enough, or do people need physical spaces too?</p><p class="q">4. What third places are common in your town or city?</p></div><div class="task"><h3>Useful language</h3><p><strong>Giving an opinion:</strong> I think third places are important because...</p><p><strong>Agreeing:</strong> I completely agree. / That makes sense.</p><p><strong>Disagreeing politely:</strong> I’m not sure I agree because...</p><p><strong>Adding an example:</strong> For example, in my town...</p></div></div>
+<div class="task"><h3>Mini task</h3><p>Write a short recommendation for a classmate: suggest one possible third place for them and explain why it could improve their well-being.</p></div>
+<div class="navline"><button class="btn" onclick="showPage(3)">Previous</button><button class="btn" onclick="showPage(0)">Back to Start</button></div>
+</section></main>
+
+<script>
+let current=0;const pages=[...document.querySelectorAll('.page')];const tabs=[...document.querySelectorAll('.tab')];
+function showPage(i){current=i;pages.forEach((p,idx)=>p.classList.toggle('active',idx===i));tabs.forEach((t,idx)=>t.classList.toggle('active',idx===i));window.scrollTo({top:0,behavior:'smooth'});}
+function clearHighlights(){document.querySelectorAll('.reading .ev').forEach(el=>el.classList.remove('on'));}
+function revealAnswer(id,evidenceIds){document.getElementById(id).classList.add('show');clearHighlights();evidenceIds.forEach(e=>{const el=document.getElementById(e);if(el){el.classList.add('on');}});}
+function toggleAnswer(id){document.getElementById(id).classList.toggle('show');}
+function pick(el){
+  const group=el.parentElement;
+  const ans=group.dataset.answer;
+  group.querySelectorAll('.choice').forEach(c=>c.classList.remove('selected','correct','wrong'));
+  el.classList.add('selected');
+  group.dataset.selected=el.dataset.value;
+  if(el.dataset.value===ans){el.classList.add('correct');}
+  else{el.classList.add('wrong');}
+}
+function checkChoices(btn){const task=btn.closest('.task');const groups=[...task.querySelectorAll('.choice-group')];let score=0;groups.forEach(group=>{const ans=group.dataset.answer;const selected=group.dataset.selected;group.querySelectorAll('.choice').forEach(c=>c.classList.remove('correct','wrong'));const picked=group.querySelector('.choice.selected');if(picked){if(selected===ans){picked.classList.add('correct');score++;}else{picked.classList.add('wrong');}group.querySelectorAll('.choice').forEach(c=>{if(c.dataset.value===ans)c.classList.add('correct');});}});const fb=task.querySelector('.feedback');if(fb){fb.style.display='block';fb.className='feedback '+(score===groups.length?'ok':'bad');fb.textContent='Score: '+score+'/'+groups.length;}}
+</script>
+</body></html>
